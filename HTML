@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script>
+    $("body").css({
+      "background-color": "blue"
+    });
+  </script>
+  <!--jQuery for effects after pressing text-->
+  <script>
+    $(document).ready(function() {
+      $("p").click(function() {
+        $("#loHe").animate({
+            left: '100px'
+          })
+          .fadeOut('slow');
+      });
+    });
+  </script>
+  <!--jQuery for effects after clicking first button -->
+  <script>
+    $(document).ready(function() {
+      $(".wrapper").click(function() {
+        $("#loHe").fadeIn('slow');
+        $('#heLo').fadeOut('slow');
+      });
+    });
+  </script>
+  <!--jQuery for effects after clicking second button-->
+  <script>
+    $(document).ready(function() {
+      $(".butt").click(function() {
+        $("#loHe").fadeOut('slow');
+      });
+    });
+  </script>
+</head>
+
+<body>
+<!--Opening Text-->
+  <div>
+    <p style="text-align: center">Press Me</p>
+  </div>
+  <!--Animated Objects-->
+  <div id="loHe" style="background:green;margin: 0 auto; height: 100px; width:100px; position:relative"> </div>
+  <div id="heLo" style="background:red;margin: 0 auto; height: 100px; width:100px; position:relative"> </div>
+  <!--Buttons-->
+  <div class="wrapper"><button> Now Press Me</button></div>
+  <div class="butt"><button>Finally, Press Me</button>
+</body>
